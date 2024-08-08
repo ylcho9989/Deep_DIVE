@@ -1,0 +1,17 @@
+<!-- Responsive navbar-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container px-5 d-flex justify-content-between align-items-center">
+        <a class="navbar-brand" href="#!">django company</a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link" href="/company/">company info</a></li>
+                <li class="nav-item"><a class="nav-link" href="/mysite/">product</a>
+                {% if user.is_authenticated %}
+                <li class="nav-item"><a class="nav-link" href="{% url 'accounts:logout' %}">{{ user.username }} (logout)</a></li>
+                {% else %}
+                <li class="nav-item"><a class="nav-link" href="{% url 'accounts:login' %}">login</a></li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+</nav>

@@ -10823,4 +10823,13 @@ textarea.form-control-lg {
   .d-print-none {
     display: none !important;
   }
+  .navbar-nav {
+    display: flex;
+    flex-direction: row;
+    gap: 20px; /* 메뉴 아이템 간의 간격을 설정합니다. */
+}
+
+.navbar-brand {
+    margin-right: 20px; /* 브랜드와 메뉴 아이템 간의 간격을 설정합니다. */
+}
 }
